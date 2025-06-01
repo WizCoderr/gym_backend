@@ -1,6 +1,6 @@
 import Stripe from 'stripe';
 
-const stripe = new Stripe('sk_test_51RLkPGQewoVc3PzjqNie7cct3lSCLzBGRs8QYY5bQCIY3EK8QgF8TA5cgxSTqtPbJzuIxsPTsDw1VRkhyfr9M8lQ006uYhqtLY');
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export const createPaymentSession = async (req, res) => {
     try {
